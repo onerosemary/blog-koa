@@ -67,7 +67,7 @@ router.use('/api/post', post)
 // 注入路由
 app.use(router.routes()).use(router.allowedMethods())
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log(`Server start on ${port}`)
 })
