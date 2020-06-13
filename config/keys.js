@@ -1,6 +1,6 @@
 module.exports = {
     // mongodbURI: 'mongodb://127.0.0.1:27017/blog2',
-    mongodbURI: 'mongodb://blogadmin:blogadmin@~123@49.232.122.19:27017/blog2',
+    mongodbURI: 'mongodb://xrpblog:xrp123456cs@49.232.122.19:27017/blog2',
     secretOrKey: 'secretblog',
     smtp: {
         get host() {
