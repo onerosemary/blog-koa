@@ -254,18 +254,18 @@ router.post('/login', async(ctx) => {
 
                 // 处理cookies中文编码报错
                 // 前端使用 decodeURIComponent 解码
-                userInfo1.name = encodeURIComponent(userInfo1.name)
-                ctx.cookies.set('userInfo', JSON.stringify(userInfo1), { // 服务端返回 用户信息给客户端 nuxtServerInit
-                    maxAge: 60000 * 60 * 24,
-                    secure: false,
-                    httpOnly: false, // 是否只是服务器可访问 cookie, 默认是 true
-                }) 
+                // userInfo1.name = encodeURIComponent(userInfo1.name)
+                // ctx.cookies.set('userInfo', JSON.stringify(userInfo1), { // 服务端返回 用户信息给客户端 nuxtServerInit
+                //     maxAge: 60000 * 60 * 24,
+                //     secure: false,
+                //     httpOnly: false, // 是否只是服务器可访问 cookie, 默认是 true
+                // }) 
             }
             
             ctx.response.body = {
                 code: 0,
                 token: Token,
-                userInfo: userInfo1
+                // userInfo: userInfo1
             }
         }else {
             ctx.response.body = {

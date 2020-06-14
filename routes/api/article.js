@@ -59,7 +59,7 @@ router.get('/type', async(ctx) => {
  */
 
 router.post('/add', async(ctx) => {
-    const {cover, title, type, looks, author, content} = ctx.request.body
+    const {cover, title, sub, type, looks, author, content} = ctx.request.body
     
     // 后端校验
     const {errors, isValid} = validatorArticleInput(ctx.request.body)
@@ -74,6 +74,7 @@ router.post('/add', async(ctx) => {
     const newArticle = new Article({
         cover,
         title,
+        sub,
         type,
         isnew: 0,
         looks,
@@ -103,7 +104,7 @@ router.post('/add', async(ctx) => {
  */
 
 router.post('/update', async(ctx) => {
-    const {id, title, type, looks, author, content} = ctx.request.body
+    const {id, title, sub, type, looks, author, content} = ctx.request.body
    
     // 后端校验
     const {errors, isValid} = validatorArticleInput(ctx.request.body)

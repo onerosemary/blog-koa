@@ -6,6 +6,10 @@ const ArticleSchema = new Schema({
         type: String,
         required: true
     },
+    sub: {
+        type: String,
+        required: true
+    },
     cover: {
         type: String
     },
