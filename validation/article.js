@@ -13,8 +13,6 @@ module.exports = function validatorArticleInput(data) {
    
     if(Validator.isEmpty(data.title)) {
         errors.title = '文章标题不能为空'
-    }else if(!Validator.isLength(data.title, {min: 6, max: 30})) {
-        errors.title = '文章标题长度不能小于6位,并不能大于30位'
     }
 
     if(Validator.isEmpty(data.sub)) {
